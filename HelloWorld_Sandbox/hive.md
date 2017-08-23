@@ -1,4 +1,4 @@
-# Hive (hdp sandbox)
+ # Hive (hdp sandbox)
 
 This is a basic example of hive focussing on connecting with hdp sandbox and trying out simple commands in programmatic fashion. Once the basic connectivity is learnt , we are expected to use online sources for deeper understading. 
 
@@ -8,18 +8,14 @@ This is a basic example of hive focussing on connecting with hdp sandbox and try
 * sandbox-ip 
 * sandbox-credendital
 
-##Optional :
-(if you want to perform update and delete operations)
-Before doing hive operations make some changes:
+## Optional 
 
-1.Log in to Ambari using user credentials raj_ops/raj_ops.
+If we want to perform update and delete operations we need to make some changes:
 
-2.Enabling Hive ACID is simple: Ambari -> Hive -> Configs. Set ACID Transactions to On.
-
-3.Set hive.enforce.bucketing to true and save changes.
-
-4.restart all the affected services.
-
+* Log in to Ambari using user credentials raj_ops/raj_ops.
+* Enabling Hive ACID is simple: Ambari -> Hive -> Configs. Set ACID Transactions to On.
+* Set hive.enforce.bucketing to true and save changes.
+* restart all the affected services.
 
 ## Setup
 
@@ -34,6 +30,7 @@ Before doing hive operations make some changes:
 	
 
 ## Hands on 
+
 Although we can use the hive shell now ( command "hive") but we will use the use hive directly from bash to be able to write queries later
 
 
