@@ -1,0 +1,25 @@
+JAVA_HOME=/usr/lib/jvm/java
+export PATH=${JAVA_HOME}/bin:${PATH}
+export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+
+-----------
+hadoop com.sun.tools.javac.Main WordCount.java
+jar cf wc.jar WordCount*.class
+--------
+
+hdfs dfs -mkdir /user/sankalpg
+hdfs dfs -mkdir /user/sankalpg/input
+hdfs dfs -mkdir /user/sankalpg/output/
+
+--------
+cat >file01
+cat >file02
+
+hdfs dfs -put ./file01  /user/sankalpg/input
+hdfs dfs -put ./file02  /user/sankalpg/input
+----------
+hadoop jar wc.jar WordCount /user/sankalpg/input /user/sankalpg/output/o1 
+
+hdfs dfs -ls  /user/sankalpg/output/o1
+hdfs dfs -cat  /user/sankalpg/output/o1/_SUCCESS
+hdfs dfs -cat  /user/sankalpg/output/o1/part-r-00000
