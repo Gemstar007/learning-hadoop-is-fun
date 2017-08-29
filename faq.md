@@ -1,15 +1,53 @@
 # Frequenty Asked Questions 
 Imagenet with Hadoop 
 
+## What is Imagenet 
+[image-net.org](http://www.image-net.org/)
+
+
+## What is the project  ?
+[ Large Scale Visual Recognition Challenge 2017 (ILSVRC2017)](http://image-net.org/challenges/LSVRC/2017/index)
+
+
+## Can you break it down for me here ?
+We have to attempt to learn how to create ML models that can be used for real world scenarios. Since the data is Image based this about helping computers learn and see what we see. 
+
+Generically and from the deloper point of view 
+automate end to end pipeline. i.e. the following tasks need to be automated 
+1. given the data , 
+2. and some scripts, 
+3. deploy hadoop (custom setup), 
+4. transform data in hadoop , 
+5. train a model 
+6. test the model.
+7. save the results(model, test-results) 
+8. destroy hadoop.
+
+Focus on automation would allow us to save significant amout of time on this project and would also give us skills for future.
+
+## So it is vision ML problem ?
+Yes and no. 
+Yes it a vision problem because we are going to deal with images mostly 
+No it is not just a vision problem because the matshs behind any ML is widely applicable.
+
+Basically becasue we are infants in this fields we are starting with a well defined and well supported problem with adequate scope to deep dive on.
+
 
 ## Can we run ML algos on Hadoop  ? 
 Yes , We there are several projects that allow for running ML algos on hadoop , Apache Mahout , H20 , spark , and we can have our own custom solutions as well.
 Initially we believed that we would use Hadoop only for data trasnforming but now we know about tese existing tools we don't need to limit our thinking here 
 
+## Do you mean  all ML should be done on hadoop ?
+
+No , Hadoop is primarity the data storage and transformation system for us. We are free to transfrorm data with hadoop and then take the o/p and train seprately from hadoop.
+
 
 ## Why do we want to use shells for interating with hadoop 
 Programmability from the start, i.e. We are from the very beginning faimialr with tools that allow us to automate things. Remever we have too little time allotted to thei project as it is.
-HOwever this does not mean we should disown UI solutions. The shells we currently used were no more than commandline prompts , it is the IDE like environment that actually makes the shell interaction more usable(think RStudio). Althout we don't yet know the IDEs that can allow us to use shells for hive , hbase , spark but we believee there would be a lot , we just need to discover them.
+
+However this does not mean we should disown UI solutions. It is the IDE like environment that actually makes the shell interaction more usable(think RStudio)The shells we currently used were no more than commandline prompts 
+
+Although we don't yet know the IDEs that can allow us to use shells for hive , hbase , spark but we believe there would be a lot , we just need to discover them.
 
 
 ## How will we store these images in Hadoop ?
@@ -42,9 +80,6 @@ After those there are scenarios that we want to accomplish ( not a complete list
 5. ....
 
 
-
-
-
 ## But what i am really supposed to do ?
 
 Chose what you like the most and do it or talk to us to help ensure best use of your time. You can also propose ans specific scenario/tool etc we should work on and we will add it to the list. 
@@ -52,7 +87,17 @@ Chose what you like the most and do it or talk to us to help ensure best use of 
 Suggestion here is to take ownership of a small item ( say which less than 4-6 hours of effort) and finish it before moving on to the next. 
 
 
+## Why hadoop ?
+Open source , industry standard , great community support , portable skills , Insane amout of scenarios supported , fast and faster ....
 
+Hadoop is the most versatile system for any big data related tasks. In any ML problem more than 80% time gets spent on transforming data in to something usable by set of model. i.e. when we are not even dealing with big data. 
+
+As we go forward in ML it is important to have skills in big data ( defacto hadoop) and then we have better chances of being a succesful ML practiioner. So lets get our tools going.
+
+
+## Deadline 
+
+Mid november to get friendlier with hadoop technologies and be able to do some rudimentary machine learnign tasks. 
 
  
 
