@@ -92,13 +92,15 @@ Open source , industry standard , great community support , portable skills , In
 
 Hadoop is the most versatile system for any big data related tasks. In any ML problem more than 80% time gets spent on transforming data in to something usable by set of model. i.e. when we are not even dealing with big data. 
 
-As we go forward in ML it is important to have skills in big data ( defacto hadoop) and then we have better chances of being a succesful ML practiioner. So lets get our tools going.
+As we go forward in ML it is important to have skills in big data ( defacto hadoop) and then we have better chances of being a successful ML practitioner. So lets get our tools going.
 
 
 ## Deadline 
 
-Mid november to get friendlier with hadoop technologies and be able to do some rudimentary machine learnign tasks. 
+Mid november to get friendlier with hadoop technologies and be able to do some rudimentary machine learning tasks. 
 
  
+## Where are the hadoop binaries?
 
+* /user/hdp/
 
