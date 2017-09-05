@@ -25,10 +25,14 @@ automate end to end pipeline. i.e. the following tasks need to be automated
 
 Focus on automation would allow us to save significant amout of time on this project and would also give us skills for future.
 
+## What programming languages do i need to know ?
+Python in the #1 choice .It is easy to learn , easy to program. If you knwo Java, C# , C++ etc you should be able to pickup python in few hours. 
+
+
 ## So it is vision ML problem ?
 Yes and no. 
 Yes it a vision problem because we are going to deal with images mostly 
-No it is not just a vision problem because the matshs behind any ML is widely applicable.
+No it is not just a vision problem because the maths behind any ML is widely applicable.
 
 Basically becasue we are infants in this fields we are starting with a well defined and well supported problem with adequate scope to deep dive on.
 
@@ -80,9 +84,9 @@ After those there are scenarios that we want to accomplish ( not a complete list
 5. ....
 
 
-## But what i am really supposed to do ?
+## But what am I really supposed to do ?
 
-Chose what you like the most and do it or talk to us to help ensure best use of your time. You can also propose ans specific scenario/tool etc we should work on and we will add it to the list. 
+Chose what you like the most and do it or talk to us to help ensure best use of your time. You can also propose any specific scenario/tool etc we should work on and we will add it to the list. Check the task list for inspiration
 
 Suggestion here is to take ownership of a small item ( say which less than 4-6 hours of effort) and finish it before moving on to the next. 
 
