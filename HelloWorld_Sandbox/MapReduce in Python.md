@@ -27,8 +27,8 @@ This is a way of passing a Map python script and a Reduce python script, and hav
 
 MapReduce is composed of two programs - Map, and Reduce.  Copy this code to mapper.py:
 
-```
-'#!/usr/bin/env python
+```python
+#!/usr/bin/env python
 
 import sys
 
@@ -52,7 +52,7 @@ for line in sys.stdin:
 
 And this code to reducer.py:
 
-```
+```python
 #!/usr/bin/env python
 
 from operator import itemgetter
@@ -95,14 +95,14 @@ if current_word == word:
 ```
 
 ### Run locally
-```
+```bash
 echo "foo foo quux labs foo bar quux" | ./mapper.py
 echo "foo foo quux labs foo bar quux" | ./mapper.py | sort -k1,1 | ./reducer.py
 ```
 
 ### Run using Hadoop!
 
-```
+```bash
 hadoop jar /usr/hdp/2.6.1.0-129/hadoop-mapreduce/hadoop-streaming.jar \
 -file /home/maria_dev/mapper.py    -mapper /home/maria_dev/mapper.py \
 -file /home/maria_dev/reducer.py   -reducer /home/maria_dev/reducer.py \
