@@ -1,0 +1,42 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "westcentralus"
+        },
+        "virtualMachineName": {
+            "value": "agvbnode02"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_DS2_v2"
+        },
+        "adminUsername": {
+            "value": "lhfun"
+        },
+        "virtualNetworkName": {
+            "value": "defaultvnet"
+        },
+        "networkInterfaceName": {
+            "value": "agvbnode02122"
+        },
+        "adminPublicKey": {
+            "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC761xYTrHqdxg/mHr2AbS01BN+SkNSVmjlHgmw1gLvXFhuJxh94TkQoWnJ8LJ63yZShVLEWS+p9nK0gaPKMY+Jkv8ephhS8pRMxUNF10wz60R0owdkHX4ZII9HNeMn8P0pHydk09aa/ciCi8bypMLc6qclYKGwRrWa7vw3EA7gCecaDWNXnVwMKT8DPScI/5N/txsxngzV49Z5xEHVZiCOk+1SzvwTUgmX2KV/Xx+Z0zeqtyBGudFS59L+Vn9/rKMdhKRpmaYlqHiIFpKUR5nNedwIzq79NwgdPKM+Pr838HGQV4qe2ISZxbNH16J2GC6I6PtnmnYRqGYcZk101RpB"
+        },
+        "storageAccountName": {
+            "value": "agvbnode02storage"
+        },
+        "storageAccountType": {
+            "value": "Premium_LRS"
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "commonservicesdiagdisks"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/186895c5-1cca-44cc-bb36-ead59a799373/resourceGroups/affirstking/providers/Microsoft.Storage/storageAccounts/commonservicesdiagdisks"
+        },
+        "subnetName": {
+            "value": "defaultsubnet"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+hortonworks cloudbreak 
+-----------
+https://github.com/hortonworks/cloudbreak
+
+sequenceIq cloudbreak 
+-------
+https://github.com/hortonworks/cloudbreak
+
+building 
+------
+http://sequenceiq.com/cloudbreak-docs/latest/shell/#fromsource
+
+
+azure cli nightly building 
+------
+https://github.com/Azure/azure-cli
+
+
+commands
+----
+az configure
+az login
+az account set  --subscription 186895c5-1cca-44cc-bb36-ead59a799373
+
+az group create -l westcentralus -n agveryberry
+
+az group deployment create -g agveryberry --template-file ./tempalte.json --parameters @parameters.json
+
+az network nic delete -g agveryberry -n agvbnode01156
+
+az storage account delete  -g affirstking -n "affirstkingedge01disks"
