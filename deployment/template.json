@@ -82,11 +82,52 @@
                     "osDisk": {
                         "createOption": "fromImage",
                         "vhd": {
-                            "uri": "[concat(concat(reference(resourceId('agveryberry', 'Microsoft.Storage/storageAccounts', parameters('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds/'), parameters('virtualMachineName'), '20170908035934.vhd')]"
+                            "uri": "[concat(concat(reference(resourceId('agveryberry', 'Microsoft.Storage/storageAccounts', parameters('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds/'), parameters('virtualMachineName'), '-osDisk.vhd')]"
                         },
                         "name": "[parameters('virtualMachineName')]"
                     },
-                    "dataDisks": []
+                    "dataDisks": [
+                        {
+                            "lun": 0,
+                            "name": "[concat(parameters('storageAccountName'),'-datadisk-01')]",
+                            "createOption": "Empty",
+                            "vhd": {
+                                "uri": "[concat(concat(reference(resourceId('agveryberry', 'Microsoft.Storage/storageAccounts', parameters('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds/'), parameters('virtualMachineName'), 'dataDisk-00.vhd')]"
+                            },
+                            "caching": "ReadOnly",
+                            "diskSizeGB": 1023
+                        },
+                        {
+                            "lun": 1,
+                            "name": "[concat(parameters('storageAccountName'),'-datadisk-02')]",
+                            "createOption": "Empty",
+                            "vhd": {
+                                "uri": "[concat(concat(reference(resourceId('agveryberry', 'Microsoft.Storage/storageAccounts', parameters('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds/'), parameters('virtualMachineName'), 'dataDisk-01.vhd')]"
+                            },
+                            "caching": "ReadOnly",
+                            "diskSizeGB": 1023
+                        },
+                        {
+                            "lun": 2,
+                            "name": "[concat(parameters('storageAccountName'),'-datadisk-03')]",
+                            "createOption": "Empty",
+                            "vhd": {
+                                "uri": "[concat(concat(reference(resourceId('agveryberry', 'Microsoft.Storage/storageAccounts', parameters('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds/'), parameters('virtualMachineName'), 'dataDisk-02.vhd')]"
+                            },
+                            "caching": "ReadOnly",
+                            "diskSizeGB": 1023
+                        },
+                        {
+                            "lun": 3,
+                            "name": "[concat(parameters('storageAccountName'),'-datadisk-04')]",
+                            "createOption": "Empty",
+                            "vhd": {
+                                "uri": "[concat(concat(reference(resourceId('agveryberry', 'Microsoft.Storage/storageAccounts', parameters('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds/'), parameters('virtualMachineName'), 'dataDisk-03.vhd')]"
+                            },
+                            "caching": "ReadOnly",
+                            "diskSizeGB": 1023
+                        }
+                    ]
                 },
                 "networkProfile": {
                     "networkInterfaces": [
