@@ -24,8 +24,24 @@ az account set  --subscription 186895c5-1cca-44cc-bb36-ead59a799373
 
 az group create -l westcentralus -n agveryberry
 
-az group deployment create -g agveryberry --template-file ./tempalte.json --parameters @parameters.json
+az group deployment create -g agveryberry --template-file ./template.json --parameters @parameters.json
 
-az network nic delete -g agveryberry -n agvbnode01156
+az vm delete -g agveryberry -n agvbnode02
+az network nic delete -g agveryberry -n agvbnode02122
+az storage account delete  -g agveryberry -n agvbnode02storage
+------------------------------------
 
-az storage account delete  -g affirstking -n "affirstkingedge01disks"
+public source linux script
+---------------
+https://github.com/Azure/azure-quickstart-templates/tree/master/201-customscript-extension-public-storage-on-ubuntu 
+
+azure storage 
+--------
+https://github.com/Azure/azure-quickstart-templates/tree/master/201-customscript-extension-azure-storage-on-ubuntu
+
+https://alexeikh.wordpress.com/2014/01/14/expanding-hdp-hadoop-file-system-to-azure-blob-storage/
+http://developers-club.com/posts/274249/
+https://channel9.msdn.com/Blogs/Open/Using-Azure-AD-for-Linux-logins
+
+
+
