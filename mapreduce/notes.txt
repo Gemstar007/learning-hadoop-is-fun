@@ -1,3 +1,4 @@
+
 JAVA_HOME=/usr/lib/jvm/java
 export PATH=${JAVA_HOME}/bin:${PATH}
 export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
@@ -27,3 +28,8 @@ hdfs dfs -cat  /user/sankalpg/output/o1/part-r-00000
 #git remote set-url origin https://yourusername@github.com/user/repo.git
 git remote set-url origin https://rusticsankalp@github.com/Gemstar007/learning-hadoop-is-fun.git
 git push --all origin
+---------------
+links
+---
+https://hadoop.apache.org/docs/r2.6.3/api/org/apache/hadoop/mapreduce/package-tree.html
+https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html
