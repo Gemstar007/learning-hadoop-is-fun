@@ -2,6 +2,7 @@
 JAVA_HOME=/usr/lib/jvm/java
 export PATH=${JAVA_HOME}/bin:${PATH}
 export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:/root/sankalpg/learning-hadoop-is-fun/mapreduce/avro-mapred-1.8.2.jar;/root/sankalpg/learning-hadoop-is-fun/mapreduce/avro-1.8.2.jar
 
 -----------
 hadoop com.sun.tools.javac.Main WordCount.java
@@ -33,3 +34,53 @@ links
 ---
 https://hadoop.apache.org/docs/r2.6.3/api/org/apache/hadoop/mapreduce/package-tree.html
 https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html
+
+=======================================
+wget http://apache.claz.org/avro/avro-1.8.2/java/avro-tools-1.8.2.jar
+wget http://apache.claz.org/avro/avro-1.8.2/java/avro-1.8.2.jar
+wget http://apache.claz.org/avro/avro-1.8.2/java/avro-mapred-1.8.2.jar
+
+java -jar /path/to/avro-tools-1.8.1.jar compile schema user.avsc . 
+
+install Maven
+------
+https://tecadmin.net/install-apache-maven-on-centos/#
+
+cd /opt
+wget http://www-eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+sudo tar xzf apache-maven-3.3.9-bin.tar.gz
+sudo ln -s apache-maven-3.3.9 maven
+sudo vi /etc/profile.d/maven.sh
+   export M2_HOME=/opt/maven
+   export PATH=${M2_HOME}/bin:${PATH}
+
+source /etc/profile.d/maven.sh
+
+mvn --version
+
+------------
+example 
+https://avro.apache.org/docs/1.7.7/mr.html
+----------------------------------
+git clone git://git.apache.org/avro.git 
+avro/doc/examples/mr-example
+mvn compile 
+mvn exec:java -q -Dexec.mainClass=example.GenerateData
+mvn exec:java -q -Dexec.mainClass=example.MapredColorCount -Dexec.args="input output"
+
+java -jar /root/sankalpg/learning-hadoop-is-fun/mapreduce/avro-tools-1.8.2.jar tojson output/part-00000.avro
+
+hadoop jar ./target/classes/firstAvroMap.jar  example.MapredColorCount  /sankalpg/avro1/input/users.avro /sankalpg/avro1/out1/
+
+
+
+hadoop jar ./target/classes/firstAvroMap.jar  example.MapredColorCount  -libjars=/root/sankalpg/learning-hadoop-is-fun/mapreduce/avro-mapred-1.8.2.jar,/root/sankalpg/learning-hadoop-is-fun/mapreduce/avro-1.8.2.jar  /sankalpg/avro1/input/users.avro /sankalpg/avro1/out1/
+
+
+hadoop jar ./target/classes/firstAvroMap.jar  example.MapredColorCount  -libjars /usr/hdp/2.6.1.0-129/sqoop/lib/avro-mapred-1.8.0-hadoop2.jar,/usr/hdp/2.6.1.0-129/sqoop/lib/avro-1.8.0.jar  /sankalpg/avro1/input/ /sankalpg/avro1/out6/
+
+hadoop jar ./target/classes/firstAvroMap.jar  example.MapredColorCount  -libjars /root/sankalpg/learning-hadoop-is-fun/mapreduce/avro-mapred-1.8.2.jar,/root/sankalpg/learning-hadoop-is-fun/mapreduce/avro-1.8.2.jar  /sankalpg/avro1/input/ /sankalpg/avro1/out6/
+
+ ls /usr/hdp/2.6.1.0-129/sqoop/lib/
+/usr/hdp/2.6.1.0-129/hadoop/lib/avro-1.7.4.jar
+
