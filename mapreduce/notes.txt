@@ -1,7 +1,47 @@
+http://answers.opencv.org/question/31855/java-api-loading-image-from-any-java-inputstream/
 
+java build tools compared
+------------------
+https://technologyconversations.com/2014/06/18/build-tools/
+
+Avro java example 
+----------------------
+https://avro.apache.org/docs/1.7.7/gettingstartedjava.html
+
+git clone git://git.apache.org/avro.git
+#install maven using 
+https://tecadmin.net/install-apache-maven-on-centos/# 
+
+##Follow tutorial steps
+
+Avro mr (non-hadoop) example
+-=-------
+https://avro.apache.org/docs/1.7.7/mr.html 
+##Follow steps
+
+
+Avro Mr convesrstion
+--------
+in classes folder do 
+--
+jar wcf avromr1.jar example
+
+run the command after configuring inputs and o/ps
+---
+hadoop jar ./target/classes/avromr1.jar  example.MapredColorCount  -libjars /root/sankalpg/tute1/jar/avro-1.7.4.jar,/root/sankalpg/tute1/jar/avro-mapred-1.7.4-hadoop2.jar  /sankalpg/avromr1/input  /sankalpg/avromr1/output/02
+
+------------------------------------
+
+hdp-select status 
+2.6.1.0-129
+
+JAVA_HOME=/usr/lib/jvm/java 
+-------------------------------------
 JAVA_HOME=/usr/lib/jvm/java
 export PATH=${JAVA_HOME}/bin:${PATH}
 export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:/root/sankalpg/tute1/jar/avro-1.7.4.jar:/root/sankalpg/tute1/jar/avro-mapred-1.7.4-hadoop2.jar 
+
 export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:/root/sankalpg/learning-hadoop-is-fun/mapreduce/avro-mapred-1.8.2.jar;/root/sankalpg/learning-hadoop-is-fun/mapreduce/avro-1.8.2.jar
 
 -----------
@@ -83,4 +123,6 @@ hadoop jar ./target/classes/firstAvroMap.jar  example.MapredColorCount  -libjars
 
  ls /usr/hdp/2.6.1.0-129/sqoop/lib/
 /usr/hdp/2.6.1.0-129/hadoop/lib/avro-1.7.4.jar
+
+hadoop jar avromr1.jar  example.MapredColorCount  -libjars /root/sankalpg/tute1/jar/avro-1.7.4.jar,/root/sankalpg/tute1/jar/avro-mapred-1.7.4-hadoop2.jar  /sankalpg/avromr1/inputl  /sankalpg/avromr1/output/01
 
