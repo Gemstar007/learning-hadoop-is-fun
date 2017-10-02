@@ -3,6 +3,11 @@ cd /etc/apt/sources.list.d/
 wget http://public-repo-1.hortonworks.com/ambari/ubuntu16/2.x/updates/2.5.2.0/ambari.list
 
 ===========
+Summary 
+
+setup ambari-server , register host with the server manually , register cluster deploy
+
+=============
 from url https://docs.hortonworks.com/HDPDocuments/Ambari-2.5.2.0/bk_ambari-installation/content/download_the_ambari_repo_ubuntu16.html 
 
 
