@@ -1,0 +1,30 @@
+# put in preseed folder of cdrom
+# Suggest LVM by default.
+d-i     partman-auto/init_automatically_partition       string some_device_lvm
+d-i     partman-auto/init_automatically_partition       seen false
+# Install the Ubuntu Server seed.
+tasksel tasksel/force-tasks     string server
+# Only install basic language packs. Let tasksel ask about tasks.
+d-i     pkgsel/language-pack-patterns   string
+# No language support packages.
+d-i     pkgsel/install-language-support boolean false
+d-i     pkgsel/upgrade select full-upgrade
+# Only ask the UTC question if there are other operating systems installed.
+d-i     clock-setup/utc-auto    boolean true
+# Verbose output and no boot splash screen.
+d-i     debian-installer/quiet  boolean false
+d-i     debian-installer/splash boolean false
+# Install the debconf oem-config frontend (if in OEM mode).
+d-i     oem-config-udeb/frontend        string debconf
+# Wait for two seconds in grub
+d-i     grub-installer/timeout  string 2
+
+# Add the network and tasks oem-config steps by default.
+oem-config      oem-config/steps        multiselect language, timezone, keyboard, user, network, tasks
+d-i  base-installer/kernel/altmeta   string lts-xenial
+# sankalp custom
+d-i preseed/early_command string umount /media || true
+d-i netcfg/hostname string holdol08
+d-i cdrom-detect/eject boolean false
+d-i preseed/late_command string in-target mkdir -p /root/.ssh; cp /cdrom/custom/id_rsa /target/root/.ssh/id_rsa;  cp /cdrom/custom/id_rsa.pub /target/root/.ssh/id_rsa.pub; cp /cdrom/custom/id_rsa.pub /target/root/.ssh/authorized_keys; in-target chmod 755 /root/.ssh; in-target chmod 600 /root/.ssh/authorized_keys; in-target chmod 600 /root/.ssh/id_rsa; in-target chmod 600 /root/.ssh/id_rsa.pub; in-target sed -i 's/PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config; in-target /bin/sh -c " echo 'net.ipv6.conf.all.disable_ipv6 = 1' >> /etc/sysctl.conf";in-target /bin/sh -c "echo 'net.ipv6.conf.default.disable_ipv6 = 1' >> /etc/sysctl.conf";in-target /bin/sh -c "echo 'net.ipv6.conf.lo.disable_ipv6 = 1' >> /etc/sysctl.conf";in-target /bin/sh -c "echo 'blacklist ipv6' >> /etc/modprobe.d/blacklist.conf";in-target /bin/sh -c "echo 'net.ipv6.conf.all.disable_ipv6 = 1' >> /etc/sysctl.d/01-disable-ipv6.conf";
+#ls /cdrom >> /target/root/out.txt; \

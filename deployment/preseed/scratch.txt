@@ -1,0 +1,5 @@
+#single machine ec install.
+https://gist.github.com/Globegitter/662713f90d5af5b4269d
+
+#use cerebro
+https://github.com/lmenezes/cerebro
