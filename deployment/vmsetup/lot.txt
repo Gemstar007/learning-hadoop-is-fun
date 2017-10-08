@@ -29,3 +29,29 @@ curl -H "X-Requested-By: ambari" -X GET -u admin:admin http://192.168.0.23:8080/
 
 curl -H "X-Requested-By: ambari" -X GET -u admin:admin http://192.168.0.23:8080/api/v1/clusters/redstar01/requests/1/1
 
+=-----------------------
+curl -H "X-Requested-By: ambari" -X GET -u admin:admin http://192.168.0.11:8080/api/v1/blueprints
+
+curl -H "X-Requested-By: ambari" -X POST -u admin:admin http://192.168.0.11:8080/api/v1/blueprints/single-node-hdp-cluster -d @cluster_config.json
+
+curl -H "X-Requested-By: ambari" -X POST -u admin:admin http://192.168.0.23:8080/api/v1/clusters/redstar02 -d @hostmapping.json
+
+curl -H "X-Requested-By: ambari" -X GET -u admin:admin http://192.168.0.23:8080/api/v1/clusters/redstar01/requests/
+
+curl -H "X-Requested-By: ambari" -X GET -u admin:admin http://192.168.0.23:8080/api/v1/clusters/redstar01/requests/1/1
+
+-----------------
+
+curl -H "X-Requested-By: ambari" -X GET -u admin:admin http://192.168.0.25:8080/api/v1/blueprints
+
+curl -H "X-Requested-By: ambari" -X POST -u admin:admin http://192.168.0.25:8080/api/v1/blueprints/single-node-hdfs-yarn -d @cluster_config.json
+
+curl -H "X-Requested-By: ambari" -X POST -u admin:admin http://192.168.0.25:8080/api/v1/clusters/redstar01 -d @cluster.json
+
+curl -H "X-Requested-By: ambari" -X GET -u admin:admin http://192.168.0.25:8080/api/v1/clusters/redstar01/requests/
+
+curl -H "X-Requested-By: ambari" -X GET -u admin:admin http://192.168.0.25:8080/api/v1/clusters/redstar01/requests/1/1
+
+-------------------
+https://community.hortonworks.com/questions/98770/hive-metastore-does-not-start.html
+https://askubuntu.com/questions/82374/how-do-i-start-stop-mysql-server
