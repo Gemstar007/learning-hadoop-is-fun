@@ -6,7 +6,7 @@
           "name" : "host_group_1",
           "hosts" : [
             {
-              "fqdn" : "stick01.hsd1.wa.comcast.net"
+              "fqdn" : "bubble01.bubble01"
             }
           ]
         }
