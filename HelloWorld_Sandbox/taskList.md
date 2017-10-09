@@ -4,24 +4,33 @@
 
 ### Hadoop technologies
 - [x] [Ruchi] Hive 
-- [ ] [Jeremy] Map Reduce in python 
+- [x] [Jeremy] Map Reduce in python 
 - [x] [Ruchi] Spark 
 - [x] [Ruchi] HBase
 - [ ] [Sankalp] Sqoop 
 - [ ] [Sankalp] Flume
-- [ ] Converting tables to parquet(or avro ) 
+- [x] [Sankalp] Converting tables to parquet(or avro ) 
+ - done outside of hadoop 
+
+### Developer Friendly scenarios
+- [ ] Create an easy workflow for devs to interact with hadoop, most likely by using eclipse ide.
 
 ### ImageNet Data Scenarios 
-- [ ] [Shazia] Image organiztion using HBase and Hive 
+- [x] [Shazia] Image organiztion using HBase and Hive 
+ -  This is conceptually done we now need to create an E2E flow.
 - [ ] Getting the data into Hadoop 
 - [ ] ImageNet Structure , strategy to come up with primary keys , creating Image indexes 
-- [ ] transforming images using external libraries (openCV, Imagemagick , leptonica ...) 
+- [x] [Ruchi] transforming images using external libraries (openCV, Imagemagick , leptonica ...) 
+ -  Ruchi Used OpenCV outside hadoop, next steps are to do it in hadoop
+
 
 ### Hadoop management scenarios
-- [x] [Sanklap] Hello world sandbox 
-- [ ] Creating Creating a linux (ubuntu ?) vm on your PC via commandline.
-- [ ] Creating a linux (ubuntu ?) vm in azure via commandline 
-- [ ] deployment using ambari blueprints 
+- [x] [Sankalp] Hello world sandbox 
+- [x] [Sankalp] Creating Creating a linux (ubuntu ?) vm on your PC via commandline.
+- [x] [Sankalp] Creating a linux (ubuntu ?) vm in azure via commandline 
+- [x] [Sankalp] deployment using ambari blueprints 
+- [ ] [Sankalp] define and document the steps to create a a single machine cluster.
+- [ ] define a build system for our processes
 - [ ] azure data to be accessible in hadoop 
 - [ ] credential management in hadoop 
 
@@ -34,7 +43,3 @@
 - [ ] Regression
 - [ ] Neural networks
 - [ ] Bayesian reasoning
-
-
- 
-
