@@ -225,6 +225,14 @@ root@bubble01:~# find / -name "avro-1.7.4.jar"
 haddop has jar for aws, azure , azure-datalake 
 
 
+https://pastiaro.wordpress.com/2013/03/18/how-to-solve-unable-to-load-native-hadoop-library-in-eclipse/
+http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/NativeLibraries.html
+https://stackoverflow.com/questions/18938802/running-simple-hadoop-programs-on-eclipse
+
+https://acadgild.com/blog/building-hadoop-application-using-gradle/
+http://www.vogella.com/tutorials/EclipseGradle/article.html
+
+
 
 
 
