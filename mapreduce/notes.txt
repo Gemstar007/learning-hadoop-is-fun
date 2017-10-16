@@ -1,3 +1,45 @@
+
+
+H:\data>pscp -P 2222 -pw 100sheets root@192.168.0.17:/root/sankalpg/files/hadoop2.6.1.0-129.hdp.centos.tar.gz ./hadoop2.6.1.0-129.hdp.centos.tar.gz
+
+
+/usr/hdp/current
+
+tar -zcvf hadoop2.6.1.0-129.hdp.centos.tar.gz /usr/hdp/2.6.1.0-129/
+
+maven hadoop eclipe mvn 
+-------
+
+https://wiki.apache.org/hadoop/EclipseEnvironment 
+
+mvn install -DskipTests
+mvn eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true
+
+
+
+
+
+https://github.com/redhat-developer/vscode-java/issues/28
+
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_144
+Path=%Path%;E:\bin\protoc-3.4.0-win32\bin
+
+https://stackoverflow.com/questions/29195269/in-the-pom-xml-for-a-java-project-i-get-missing-artifact-jdk-toolsjdk-toolsja
+
+
+
+hortonworks cloudbreak 
+-----------
+https://github.com/hortonworks/cloudbreak
+
+sequenceIq cloudbreak 
+-------
+https://github.com/hortonworks/cloudbreak
+
+building 
+------
+http://sequenceiq.com/cloudbreak-docs/latest/shell/#fromsource
+
 http://answers.opencv.org/question/31855/java-api-loading-image-from-any-java-inputstream/
 
 java build tools compared
@@ -125,4 +167,65 @@ hadoop jar ./target/classes/firstAvroMap.jar  example.MapredColorCount  -libjars
 /usr/hdp/2.6.1.0-129/hadoop/lib/avro-1.7.4.jar
 
 hadoop jar avromr1.jar  example.MapredColorCount  -libjars /root/sankalpg/tute1/jar/avro-1.7.4.jar,/root/sankalpg/tute1/jar/avro-mapred-1.7.4-hadoop2.jar  /sankalpg/avromr1/inputl  /sankalpg/avromr1/output/01
+----------------
+
+root@bubble01:~# /usr/jdk64/jdk1.8.0_112/bin/java -version
+java version "1.8.0_112"
+Java(TM) SE Runtime Environment (build 1.8.0_112-b15)
+Java HotSpot(TM) 64-Bit Server VM (build 25.112-b15, mixed mode)
+
+ /usr/lib/jvm/default-java/bin/java -version
+openjdk version "1.8.0_131"
+OpenJDK Runtime Environment (build 1.8.0_131-8u131-b11-2ubuntu1.16.04.3-b11)
+OpenJDK 64-Bit Server VM (build 25.131-b11, mixed mode)
+root@bubble01:~# 
+
+tools.jar is part of java
+---------------
+/usr/jdk64/jdk1.8.0_112/lib/tools.jar
+
+avro locations 
+-----
+root@bubble01:~# find / -name "avro-1.7.4.jar"
+/var/lib/ambari-server/resources/views/work/HIVE{2.0.0}/WEB-INF/lib/avro-1.7.4.jar
+/var/lib/ambari-server/resources/views/work/CAPACITY-SCHEDULER{1.0.0}/WEB-INF/lib/avro-1.7.4.jar
+/var/lib/ambari-server/resources/views/work/WORKFLOW_MANAGER{1.0.0}/WEB-INF/lib/avro-1.7.4.jar
+/var/lib/ambari-server/resources/views/work/TEZ{0.7.0.2.6.2.0-205}/WEB-INF/lib/avro-1.7.4.jar
+/var/lib/ambari-server/resources/views/work/HIVE{1.5.0}/WEB-INF/lib/avro-1.7.4.jar
+/var/lib/ambari-server/resources/views/work/HUETOAMBARI_MIGRATION{1.0.0}/WEB-INF/lib/avro-1.7.4.jar
+/var/lib/ambari-server/resources/views/work/PIG{1.0.0}/WEB-INF/lib/avro-1.7.4.jar
+/var/lib/ambari-server/resources/views/work/SLIDER{2.0.0}/WEB-INF/lib/avro-1.7.4.jar
+/var/lib/ambari-server/resources/views/work/FILES{1.0.0}/WEB-INF/lib/avro-1.7.4.jar
+/usr/hdp/2.6.2.0-205/hadoop/client/avro-1.7.4.jar
+/usr/hdp/2.6.2.0-205/hadoop/lib/avro-1.7.4.jar
+/usr/hdp/2.6.2.0-205/hadoop-mapreduce/lib/avro-1.7.4.jar
+/usr/hdp/2.6.2.0-205/hadoop-mapreduce/avro-1.7.4.jar
+/usr/hdp/2.6.2.0-205/oozie/oozie-server/webapps/oozie/WEB-INF/lib/avro-1.7.4.jar
+/usr/hdp/2.6.2.0-205/oozie/libtools/avro-1.7.4.jar
+/usr/hdp/2.6.2.0-205/oozie/lib/avro-1.7.4.jar
+/usr/hdp/2.6.2.0-205/oozie/libserver/avro-1.7.4.jar
+/usr/hdp/2.6.2.0-205/hadoop-yarn/lib/avro-1.7.4.jar
+/usr/hdp/2.6.2.0-205/falcon/client/lib/avro-1.7.4.jar
+/usr/hdp/2.6.2.0-205/mahout/lib/avro-1.7.4.jar
+/usr/hdp/2.6.2.0-205/slider/lib/avro-1.7.4.jar
+/usr/lib/ambari-server/avro-1.7.4.jar
+/usr/lib/ambari-metrics-collector/avro-1.7.4.jar
+/hadoop/yarn/local/filecache/10/mapreduce.tar.gz/hadoop/share/hadoop/yarn/lib/avro-1.7.4.jar
+/hadoop/yarn/local/filecache/10/mapreduce.tar.gz/hadoop/share/hadoop/mapreduce/lib/avro-1.7.4.jar
+/hadoop/yarn/local/filecache/10/mapreduce.tar.gz/hadoop/share/hadoop/tools/lib/avro-1.7.4.jar
+/hadoop/yarn/local/filecache/10/mapreduce.tar.gz/hadoop/share/hadoop/httpfs/tomcat/webapps/webhdfs/WEB-INF/lib/avro-1.7.4.jar
+/hadoop/yarn/local/filecache/10/mapreduce.tar.gz/hadoop/share/hadoop/common/lib/avro-1.7.4.jar
+/hadoop/yarn/local/filecache/10/mapreduce.tar.gz/hadoop/share/hadoop/kms/tomcat/webapps/kms/WEB-INF/lib/avro-1.7.4.jar
+
+
+
+/usr/hdp/2.6.2.0-205/hadoop-mapreduce
+/usr/hdp/2.6.2.0-205/hadoop/client/
+
+haddop has jar for aws, azure , azure-datalake 
+
+
+
+
+
 
